@@ -1,1 +1,57 @@
+/*type selecters */
 
+p {color:rgb(61, 10, 10)}
+
+body {color:rgb(61, 10, 10);
+font-family: "Victor Mono", cursive, sans-serif;}
+
+
+
+image-container {
+  position: relative; /* Acts as the anchor for absolute children */
+  width: 500px;
+}
+
+.base {
+  width: 100%;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 4300px;     /* Distance from the top of the container */
+  left: 20px;    /* Distance from the left of the container */
+  z-index: 10;   /* Higher number stays on top */
+  width: 150px;
+}
+
+
+
+  tiny-pic {
+  position: relative; /* Acts as the anchor for absolute children */
+  width: 500px;
+}
+
+.base {
+  width: 100%;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 4400px;     /* Distance from the top of the container */
+  left: 45px;    /* Distance from the left of the container */
+  z-index: 10;   /* Higher number stays on top */
+  width: 300px;
+
+}
+
+
+
+
+body {
+  background-image: url('images/Helldivers.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
