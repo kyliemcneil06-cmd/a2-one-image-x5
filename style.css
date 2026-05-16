@@ -46,12 +46,15 @@ image-container {
 
 }
 
-
-
-
 body {
   background-image: url('images/Helldivers.png');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
 }
+
+.deepfried {
+  filter: contrast(350%) brightness(300%) saturate(400%);
+}
+
+
