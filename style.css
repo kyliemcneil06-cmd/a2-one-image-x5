@@ -1,4 +1,4 @@
-/*type selecters */
+/* colours and such for all text */
 
 p {color:rgb(61, 10, 10)}
 
@@ -8,12 +8,13 @@ p {background-color:rgb(240, 193, 153);}
 body {color:rgb(61, 10, 10);
 font-family: "Papyrus", cursive, sans-serif;}
 
-
+/* number 2 */
 
 image-container {
   position: relative; /* Acts as the anchor for absolute children */
   width: 500px;
 }
+/* number 1 */
 
 .slanted {
 
@@ -63,20 +64,29 @@ body {
   background-size: 100% 100%;
 }
 
+/* number 3 */
+
 .deepfried {
   filter: contrast(350%) brightness(300%) saturate(400%);
   transform: rotate(50deg); 
   /* this was a complete accident /\ */
 }
 
+/* number 4 */
+
 .extremecontrast {
   filter: contrast(500%);
   transform: rotate(-50deg);
 }
 
+/* number 5 */
+
 .inverted {
   filter: invert(100%); transform: rotate(180deg);
 }
+
+
+/* number 6 */
 
 .glitch-container {
   position: relative;
@@ -135,4 +145,12 @@ body {
   50% { clip-path: inset(5% 0 40% 0); }
   75% { clip-path: inset(45% 0 25% 0); }
   100% { clip-path: inset(90% 0 5% 0); }
+}
+
+/* media query (??) */
+@media (max-width: 600px) {
+  .slanted, .deepfried, .extremecontrast, .inverted, .glitch-container {
+    width: 100%;
+    transform: none; /* Remove rotation for smaller screens */
+  }
 }
