@@ -17,6 +17,7 @@ image-container {
 .slanted {
 
   transform: rotate(50deg);
+  filter: saturate(4000%);
 
 }
 
@@ -63,12 +64,14 @@ body {
 
 .deepfried {
   filter: contrast(350%) brightness(300%) saturate(400%);
-  transform: rotate(50deg);
+  transform: rotate(50deg); 
+  /* this was a complete accident /\ */
 }
 
 .extremecontrast {
-  filter: contrast(500%)
-}   
+  filter: contrast(500%);
+  transform: rotate(-50deg);
+}
 
 .inverted {
   filter: invert(100%); transform: rotate(180deg);
