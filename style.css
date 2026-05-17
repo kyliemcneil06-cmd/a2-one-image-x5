@@ -57,4 +57,7 @@ body {
   filter: contrast(350%) brightness(300%) saturate(400%);
 }
 
+.extremecontrast {
+  filter: contrast(500%)
+}
 
