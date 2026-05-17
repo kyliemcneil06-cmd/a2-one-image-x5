@@ -2,8 +2,10 @@
 
 p {color:rgb(61, 10, 10)}
 
+h1 {background-color:rgb(240, 193, 153);}
+
 body {color:rgb(61, 10, 10);
-font-family: "Victor Mono", cursive, sans-serif;}
+font-family: "Papyrus", cursive, sans-serif;}
 
 
 
@@ -59,5 +61,67 @@ body {
 
 .extremecontrast {
   filter: contrast(500%)
+}   
+
+.inverted {
+  filter: invert(100%); transform: rotate(180deg);
 }
 
+.glitch-container {
+  position: relative;
+  width: 500px; /* Adjust to your image size */
+  overflow: hidden;
+}
+
+.glitch-img {
+  width: 100%;
+  display: block;
+}
+
+/* Create the glitch layers using pseudo-elements */
+.glitch-container::before,
+.glitch-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('images/Helldivers.png') no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+}
+
+/* Red shift layer */
+.glitch-container::before {
+  left: 2px;
+  text-shadow: -2px 0 #ff00c1;
+  clip-path: inset(45% 0 45% 0);
+  animation: glitch-anim-1 2s infinite linear alternate-reverse;
+}
+
+/* Blue shift layer */
+.glitch-container::after {
+  left: -2px;
+  text-shadow: -2px 0 #00fff9;
+  clip-path: inset(10% 0 80% 0);
+  animation: glitch-anim-2 3s infinite linear alternate-reverse;
+}
+
+/* Keyframes for random clipping strips */
+@keyframes glitch-anim-1 {
+  0% { clip-path: inset(20% 0 30% 0); }
+  20% { clip-path: inset(60% 0 10% 0); }
+  40% { clip-path: inset(40% 0 50% 0); }
+  60% { clip-path: inset(80% 0 5% 0); }
+  80% { clip-path: inset(10% 0 70% 0); }
+  100% { clip-path: inset(30% 0 20% 0); }
+}
+
+@keyframes glitch-anim-2 {
+  0% { clip-path: inset(15% 0 85% 0); }
+  25% { clip-path: inset(70% 0 10% 0); }
+  50% { clip-path: inset(5% 0 40% 0); }
+  75% { clip-path: inset(45% 0 25% 0); }
+  100% { clip-path: inset(90% 0 5% 0); }
+}
